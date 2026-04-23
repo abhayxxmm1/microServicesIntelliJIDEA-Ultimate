@@ -11,6 +11,7 @@ import java.util.List;
 @Service
 public class UserService {
     private List<User> userList = new ArrayList<>();
+    private Long customId= 1L;
 
     public List<User> fetchAllUsers(){
 
@@ -19,7 +20,7 @@ public class UserService {
 
     public List<User> addUser(User keepEyeOnMe){
 
-
+        keepEyeOnMe.setId(customId++);
         userList.add(keepEyeOnMe);
         return userList;
     }
