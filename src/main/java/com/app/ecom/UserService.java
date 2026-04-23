@@ -1,0 +1,26 @@
+package com.app.ecom;
+
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Service
+public class UserService {
+    private List<User> userList = new ArrayList<>();
+
+    public List<User> fetchAllUsers(){
+
+        return userList;
+    }
+
+    public List<User> addUser(User keepEyeOnMe){
+
+
+        userList.add(keepEyeOnMe);
+        return userList;
+    }
+}
